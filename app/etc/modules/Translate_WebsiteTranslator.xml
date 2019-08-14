@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Translate_WebsiteTranslator>
+      <active>true</active>
+      <codePool>community</codePool>
+      <version>0.1.0</version>
+    </Translate_WebsiteTranslator>
+  </modules>
+</config>

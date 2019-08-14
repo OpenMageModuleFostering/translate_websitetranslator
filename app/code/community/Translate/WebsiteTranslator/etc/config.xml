@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<config>
+
+  <modules>
+    <Translate_WebsiteTranslator>
+      <version>0.1.0</version>
+    </Translate_WebsiteTranslator>
+  </modules>
+
+  <frontend>
+    <routers>
+      <websitetranslator>
+        <use>standard</use>
+          <args>
+            <module>Translate_WebsiteTranslator</module>
+            <frontName>websitetranslator</frontName>
+          </args>
+      </websitetranslator>
+    </routers>
+		<layout>
+		  <updates>
+  			<websitetranslator>
+  			  <file>websitetranslator.xml</file>
+  			</websitetranslator>
+		  </updates>
+		</layout>
+  </frontend>
+
+  <global>
+    <helpers>
+      <websitetranslator>
+        <class>Translate_WebsiteTranslator_Helper</class>
+      </websitetranslator>
+    </helpers>
+
+  	<blocks>
+  	  <websitetranslator>
+  		<class>Translate_WebsiteTranslator_Block</class>
+  	  </websitetranslator>
+  	</blocks>
+
+    <models>
+  	  <websitetranslator>
+    		<class>Translate_WebsiteTranslator_Model</class>
+    		<resourceModel>websitetranslator_mysql4</resourceModel>
+  	  </websitetranslator>
+  	  <websitetranslator_mysql4>
+    		<class>Translate_WebsiteTranslator_Model_Mysql4</class>
+    		<entities>
+  			  <websitetranslator>
+  				  <table>translate_wt_settings</table>
+  			  </websitetranslator>
+    		</entities>
+  	  </websitetranslator_mysql4>
+  	</models>
+
+  	<resources>
+  	  <websitetranslator_setup>
+    		<setup>
+    		  <module>Translate_WebsiteTranslator</module>
+    		</setup>
+    		<connection>
+    		  <use>core_setup</use>
+    		</connection>
+  	  </websitetranslator_setup>
+  	  <websitetranslator_write>
+    		<connection>
+    		  <use>core_write</use>
+    		</connection>
+  	  </websitetranslator_write>
+  	  <websitetranslator_read>
+    		<connection>
+    		  <use>core_read</use>
+    		</connection>
+  	  </websitetranslator_read>
+  	</resources>
+  </global>
+
+  <admin>
+  	<routers>
+  	  <websitetranslator>
+  	    <use>admin</use>
+  		<args>
+  		  <module>Translate_WebsiteTranslator</module>
+  		  <frontName>admin_websitetranslator</frontName>
+  		</args>
+  	  </websitetranslator>
+  	</routers>
+  </admin>
+
+  <adminhtml>
+  	<menu>
+  	  <websitetranslator module="websitetranslator">
+  		<title>Translate.com</title>
+  		<sort_order>100</sort_order>
+  		<children>
+  		  <websitetranslatorbackend module="websitetranslator">
+    			<title>Website Translator</title>
+    			<sort_order>0</sort_order>
+    			<action>admin_websitetranslator/adminhtml_websitetranslatorbackend</action>
+  		  </websitetranslatorbackend>
+  		</children>
+  	  </websitetranslator>
+  	</menu>
+  	<acl>
+  	  <resources>
+    		<all>
+    		  <title>Allow Everything</title>
+    		</all>
+    		<admin>
+    		  <children>
+      			<websitetranslator translate="title" module="websitetranslator">
+      			  <title>Website Translator</title>
+      			  <sort_order>1000</sort_order>
+      			  <children>
+          		  <websitetranslatorbackend translate="title">
+          			    <title>Translate.com</title>
+          		  </websitetranslatorbackend>
+      			  </children>
+      			</websitetranslator>
+    		  </children>
+    		</admin>
+  	  </resources>
+  	</acl>
+  	<layout>
+  	  <updates>
+  		<websitetranslator>
+  		  <file>websitetranslator.xml</file>
+  		</websitetranslator>
+  	  </updates>
+  	</layout>
+  </adminhtml>
+
+</config>
