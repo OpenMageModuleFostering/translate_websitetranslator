@@ -3,7 +3,7 @@
 
   <modules>
     <Translate_WebsiteTranslator>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
     </Translate_WebsiteTranslator>
   </modules>
 
@@ -91,15 +91,15 @@
   <adminhtml>
   	<menu>
   	  <websitetranslator module="websitetranslator">
-  		<title>Translate.com</title>
-  		<sort_order>100</sort_order>
-  		<children>
-  		  <websitetranslatorbackend module="websitetranslator">
-    			<title>Website Translator</title>
-    			<sort_order>0</sort_order>
-    			<action>admin_websitetranslator/adminhtml_websitetranslatorbackend</action>
-  		  </websitetranslatorbackend>
-  		</children>
+    		<title>Translate.com</title>
+    		<sort_order>100</sort_order>
+    		<children>
+    		  <websitetranslatorbackend module="websitetranslator">
+      			<title>Website Translator</title>
+      			<sort_order>0</sort_order>
+      			<action>admin_websitetranslator/adminhtml_websitetranslatorbackend</action>
+    		  </websitetranslatorbackend>
+    		</children>
   	  </websitetranslator>
   	</menu>
   	<acl>
@@ -114,7 +114,7 @@
       			  <sort_order>1000</sort_order>
       			  <children>
           		  <websitetranslatorbackend translate="title">
-          			    <title>Translate.com</title>
+          			  <title>Translate.com</title>
           		  </websitetranslatorbackend>
       			  </children>
       			</websitetranslator>
@@ -124,9 +124,9 @@
   	</acl>
   	<layout>
   	  <updates>
-  		<websitetranslator>
-  		  <file>websitetranslator.xml</file>
-  		</websitetranslator>
+    		<websitetranslator>
+    		  <file>websitetranslator.xml</file>
+    		</websitetranslator>
   	  </updates>
   	</layout>
   </adminhtml>
