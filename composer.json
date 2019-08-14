@@ -1,12 +1,12 @@
 {
     "name": "OpenMageModuleFostering/Translate_WebsiteTranslator",
     "type": "magento-module",
-    "license": "GNU-General-Public-License-(GPL)",
+    "license": "GNU-General-Public-License",
     "homepage": "",
-    "description": "This extension configures and installs Translate.com's Website Translator on your Magento Store.",
+    "description": "Easily configure and install your Translate.com Website Translator script!",
     "authors": [
     {
-        "name": "Bob Kinsloe",
+        "name": "Translate.com",
         "email": "bob@emergemedia.com"
     }
 ],
