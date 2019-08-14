@@ -24,158 +24,194 @@ if (isset($_POST['wt-settings-submit']))
 
 ?>
 <div class="wrap">
-  <h2>Translate.com Website Translator Settings</h2>
-
+  <div>
+    <img width="30px" src="https://www.translate.com/images/translate-logo-mark-blue.svg">
+    <h1>Website Translator</h1>
+  </div>
+  <div id="heading-wrapper">
+    <div id="heading-title">Settings</div>
+    <div id="need-help"><a href="https://translatecom.zendesk.com/hc/en-us/articles/222726227-Shopify-App-Usage">Need help?</a></div>
+  </div>
   <form method="post" action="<?php echo Mage::helper('core/url')->getCurrentUrl(); ?>">
-    <table class="form-table wt-settings">
-      <tr valign="top">
-        <th scope="row">Website Key</th>
-        <td>
-          <?php $setting = $model->load('website_key', 'setting_name');?>
-          <input type="text" name="website_key" value="<?php echo $setting->getSettingValue(); ?>" size="25"/><i class="example"> (eg. QwErtY345XYZ7890asdf)</i>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Find your Website Key in your <a href="https://translate.com/portal/website_translator" target="_blank">Website Translator Portal</a></p></td>
-      </tr>
-
-      <tr valign="top">
-        <th scope="row">Remember Language</th>
-        <td>
-          <?php
-          $setting = $model->load('remember_language', 'setting_name');
-          if ( $setting->getSettingValue() === 'false') {
-            $on_checked = '';
-            $off_checked = 'checked';
-          } else {
-            $on_checked = 'checked';
-            $off_checked = '';
-          }
-          ?>
-          <label><input type="radio" name="remember_language" value="true" <?php echo $on_checked; ?>/>On</label>
-          <label><input type="radio" name="remember_language" value="false" <?php echo $off_checked; ?>/>Off</label>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Remember the user's selected language for the next time they visit.</p></td>
-      </tr>
-
-      <tr valign="top">
-        <th scope="row">Guess Language</th>
-        <td>
-          <?php
-          $setting = $model->load('guess_language', 'setting_name');
-          if ( $setting->getSettingValue() === 'false') {
-            $on_checked = '';
-            $off_checked = 'checked';
-          } else {
-            $on_checked = 'checked';
-            $off_checked = '';
-          }
-          ?>
-          <label><input type="radio" name="guess_language" value="true" <?php echo $on_checked; ?>/>On</label>
-          <label><input type="radio" name="guess_language" value="false" <?php echo $off_checked; ?>/>Off</label>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Attempt to guess the user's preferred language based on their browser settings.</p></td>
-      </tr>
-
-      <tr valign="top">
-        <th scope="row">Translate Meta</th>
-        <td>
-          <?php
-          $setting = $model->load('translate_meta', 'setting_name');
-          if ( $setting->getSettingValue() === 'false') {
-            $on_checked = '';
-            $off_checked = 'checked';
-          } else {
-            $on_checked = 'checked';
-            $off_checked = '';
-          }
-          ?>
-          <label><input type="radio" name="translate_meta" value="true" <?php echo $on_checked; ?>/>On</label>
-          <label><input type="radio" name="translate_meta" value="false" <?php echo $off_checked; ?>/>Off</label>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Translate the meta tags (keywords and description) of your site.</p></td>
-      </tr>
-
-      <tr valign="top">
-        <th scope="row">Localize Images</th>
-        <td>
-          <?php
-          $setting = $model->load('localize_images', 'setting_name');
-          if ( $setting->getSettingValue() === 'false') {
-            $on_checked = '';
-            $off_checked = 'checked';
-          } else {
-            $on_checked = 'checked';
-            $off_checked = '';
-          }
-          ?>
-          <label><input type="radio" name="localize_images" value="true" <?php echo $on_checked; ?>/>On</label>
-          <label><input type="radio" name="localize_images" value="false" <?php echo $off_checked; ?>/>Off</label>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Replace images on your site with their localized version. <i class="example">(eg. image1.jpg to image1@fr.jpg)</i></p></td>
-      </tr>
-
-      <tr valign="top">
-        <th scope="row">Localize Background Images</th>
-        <td>
-          <?php
-          $setting = $model->load('localize_bg_images', 'setting_name');
-          if ( $setting->getSettingValue() === 'false') {
-            $on_checked = '';
-            $off_checked = 'checked';
-          } else {
-            $on_checked = 'checked';
-            $off_checked = '';
-          }
-          ?>
-          <label><input type="radio" name="localize_bg_images" value="true" <?php echo $on_checked; ?>/>On</label>
-          <label><input type="radio" name="localize_bg_images" value="false" <?php echo $off_checked; ?>/>Off</label>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Replace background images on your site with their localized version. <i class="example">(eg. bg-image.png to bg-image@nl.png)</i></p></td>
-      </tr>
-
-      <tr valign="top">
-        <th scope="row">Localize Media</th>
-        <td>
-          <?php
-          $setting = $model->load('localize_media', 'setting_name');
-          if ( $setting->getSettingValue() === 'false') {
-            $on_checked = '';
-            $off_checked = 'checked';
-          } else {
-            $on_checked = 'checked';
-            $off_checked = '';
-          }
-          ?>
-          <label><input type="radio" name="localize_media" value="true" <?php echo $on_checked; ?>/>On</label>
-          <label><input type="radio" name="localize_media" value="false" <?php echo $off_checked; ?>/>Off</label>
-        </td>
-      </tr>
-      <tr class="wt-description">
-        <td colspan="2"><p>Replace HTML5 audio and video elements on your site with their localized version. <i class="example">(eg. video1.mp4 to video1@zh.mp4)</i></p></td>
-      </tr>
-    </table>
-
+    <div class="language-settings">
+      <h2>Language Settings</h2>
+      <h3>Remember Language</h3>
+      <div class="wt-subtext">Remember the user's selected language for the next time they visit</div>
+        <?php
+        $setting = $model->load('remember_language', 'setting_name');
+        if ( $setting->getSettingValue() === 'false') {
+          $on_checked = '';
+          $off_checked = 'checked';
+        } else {
+          $on_checked = 'checked';
+          $off_checked = '';
+        }
+        ?>
+      <div class="wt-buttons">
+        <label><input type="radio" name="remember_language" value="true" <?php echo $on_checked; ?>/> On</label>
+        <label><input type="radio" name="remember_language" value="false" <?php echo $off_checked; ?>/> Off</label>
+      </div>
+      <h3>Guess Language</h3>
+      <div class="wt-subtext">Attempt to guess the user's preferred language based on their browser settings</div>
+        <?php
+        $setting = $model->load('guess_language', 'setting_name');
+        if ( $setting->getSettingValue() === 'false') {
+          $on_checked = '';
+          $off_checked = 'checked';
+        } else {
+          $on_checked = 'checked';
+          $off_checked = '';
+        }
+        ?>
+      <div class="wt-buttons">
+        <label><input type="radio" name="guess_language" value="true" <?php echo $on_checked; ?>/> On</label>
+        <label><input type="radio" name="guess_language" value="false" <?php echo $off_checked; ?>/> Off</label>
+      </div>
+    </div>
+    <div class="translation-settings">
+      <h2>Translation Settings</h2>
+      <h3>Images</h3>
+      <div class="wt-subtext">Replace images on your site with their localized versions <br/>(eg. image1.jpg to image1@fr.jpg)</div>
+        <?php
+        $setting = $model->load('localize_images', 'setting_name');
+        if ( $setting->getSettingValue() === 'false') {
+          $on_checked = '';
+          $off_checked = 'checked';
+        } else {
+          $on_checked = 'checked';
+          $off_checked = '';
+        }
+        ?>
+      <div class="wt-buttons">
+        <label><input type="radio" name="localize_images" value="true" <?php echo $on_checked; ?>/> On</label>
+        <label><input type="radio" name="localize_images" value="false" <?php echo $off_checked; ?>/> Off</label>
+      </div>
+      <h3>Audio/Video</h3>
+      <div class="wt-subtext">Replace HTML5 audio/video on your site with their localized version <br/>(eg. video1.mp4 video1@zh.mp4)</div>
+        <?php
+        $setting = $model->load('localize_media', 'setting_name');
+        if ( $setting->getSettingValue() === 'false') {
+          $on_checked = '';
+          $off_checked = 'checked';
+        } else {
+          $on_checked = 'checked';
+          $off_checked = '';
+        }
+        ?>
+      <div class="wt-buttons">
+        <label><input type="radio" name="localize_media" value="true" <?php echo $on_checked; ?>/> On</label>
+        <label><input type="radio" name="localize_media" value="false" <?php echo $off_checked; ?>/> Off</label>
+      </div>
+      <h3>Background Images</h3>
+      <div class="wt-subtext">Replace background images on your site with their localized version (eg. bg-image.png to bg-image@zh.png)</div>
+      <?php
+      $setting = $model->load('localize_bg_images', 'setting_name');
+      if ( $setting->getSettingValue() === 'false') {
+        $on_checked = '';
+        $off_checked = 'checked';
+      } else {
+        $on_checked = 'checked';
+        $off_checked = '';
+      }
+      ?>
+      <div class="wt-buttons">
+        <label><input type="radio" name="localize_bg_images" value="true" <?php echo $on_checked; ?>/> On</label>
+        <label><input type="radio" name="localize_bg_images" value="false" <?php echo $off_checked; ?>/> Off</label>
+      </div>
+      <h3>Meta Tags</h3>
+      <div class="wt-subtext">Translate the meta tags (keywords and description) of your site</div>
+        <?php
+        $setting = $model->load('translate_meta', 'setting_name');
+        if ( $setting->getSettingValue() === 'false') {
+          $on_checked = '';
+          $off_checked = 'checked';
+        } else {
+          $on_checked = 'checked';
+          $off_checked = '';
+        }
+        ?>
+      <div class="wt-buttons">
+        <label><input type="radio" name="translate_meta" value="true" <?php echo $on_checked; ?>/> On</label>
+        <label><input type="radio" name="translate_meta" value="false" <?php echo $off_checked; ?>/> Off</label>
+      </div>
+    </div>
     <input type="hidden" name="form_key" value="<?php echo Mage::getSingleton('core/session')->getFormKey(); ?>" />
-
-    <input id="wt-settings-submit" name="wt-settings-submit" type="submit" value="Save"/>
+    <p id="add_languages_text">To add more translation languages, visit <a href="https://translate.com/portal/website_translator" target="_blank">Translate.com</a></p>
+    <p id="add_languages_text">Need to update your website key? <a href="<?php print $this->getUrl('admin_websitetranslator/adminhtml_websitetranslatorgetstarted'); ?>">Click here</a></p>
+    <input id="wt-settings-submit" name="wt-settings-submit" type="submit" value="Save Settings"/>
 
   </form>
-  <p>Manage your website's translations and other settings from your <a href="https://translate.com/portal/website_translator" target="_blank">Website Translator Portal</a></p>
 
-  <p>For detailed customization info, please visit the documentation at <a href="https://support.translate.com" target="_blank">support.translate.com</a></p>
 </div>
 <style>
+h1 {
+  padding-left: 40px;
+  margin-bottom: 30px;
+  line-height: .8em;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+}
+h2 {
+  font-weight: 520;
+}
+h3 {
+  font-weight: 400;
+}
+img {
+  float: left;
+}
+#heading-wrapper {
+  width: 660px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+#heading-title {
+  float: left;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: gray;
+}
+#need-help {
+   float: right;
+}
+#need-help a {
+
+  font-size: 16px;
+  text-decoration: none;
+  color: #217bb9;
+}
+.middle {
+  background: #ebeef0;
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', sans-serif
+}
+label {
+  padding: 15px 20px 10px 0px;
+}
+.language-settings {
+  background: white;
+  margin-bottom: 30px;
+  width: 600px;
+  padding: 20px 30px 20px 30px;
+  border-radius: 3px;
+  box-shadow: 1px 3px 10px rgba(0,0,0,0.1);
+}
+.translation-settings {
+  background: white;
+  margin-top:10px;
+  width: 600px;
+  padding: 20px 30px 20px 30px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  box-shadow: 1px 3px 10px rgba(0,0,0,0.1);
+}
+.wt-subtext {
+  color: #999;
+  margin-bottom: 12px;
+}
+.wt-buttons {
+  margin-bottom: 20px;
+}
 .wt-settings th {
   padding: 0;
   vertical-align: middle;
@@ -183,19 +219,32 @@ if (isset($_POST['wt-settings-submit']))
 .wt-settings td {
   padding: 0;
 }
-.wt-description td {
-  padding: 0 0 30px 0;
-}
 .wt-settings label {
   margin-right: 8px;
 }
 .wt-settings input {
   margin-right: 3px;
+  cursor: pointer;
 }
 #wt-settings-submit {
-  margin-bottom: 30px;
+  margin-top: 10px;
+  width: 150px;
+  height: 30px;
+  color: white;
+  background: #217bb9;
+  border-radius: 3px;
+  border: none;
+  font-size: 13px;
+  margin-bottom: 35px;
+  cursor: pointer;
 }
 i.example {
   color: #999;
+}
+#add_languages_text {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
 }
 </style>

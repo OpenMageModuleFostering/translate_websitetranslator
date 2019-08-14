@@ -28,7 +28,8 @@ $default_settings = array(
     'translate_meta' => 'true',
     'localize_images' => 'false',
     'localize_bg_images' => 'false',
-    'localize_media' => 'false'
+    'localize_media' => 'false',
+    'install' => 'false'
 );
 
 foreach ($default_settings as $setting_name => $setting_value)

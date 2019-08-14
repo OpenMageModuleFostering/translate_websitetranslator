@@ -3,7 +3,7 @@
 
   <modules>
     <Translate_WebsiteTranslator>
-      <version>1.0.1</version>
+      <version>1.0.3</version>
     </Translate_WebsiteTranslator>
   </modules>
 
@@ -95,8 +95,53 @@
     		<sort_order>100</sort_order>
     		<children>
     		  <websitetranslatorbackend module="websitetranslator">
-      			<title>Website Translator</title>
-      			<sort_order>0</sort_order>
+      			<title>Settings</title>
+      			<sort_order>60</sort_order>
+      			<action>admin_websitetranslator/adminhtml_websitetranslatorbackend</action>
+    		  </websitetranslatorbackend>
+    		  <websitetranslatorgettingstarted module="websitetranslator">
+      			<title>Setup</title>
+      			<sort_order>70</sort_order>
+      			<action>admin_websitetranslator/adminhtml_websitetranslatorgetstarted</action>
+    		  </websitetranslatorgettingstarted>
+    		</children>
+  	  </websitetranslator>
+  	</menu>
+  	<acl>
+  	  <resources>
+    		<all>
+    		  <title>Allow Everything</title>
+    		</all>
+    		<admin>
+    		  <children>
+      			<websitetranslator translate="title" module="websitetranslator">
+      			  <title>Settings</title>
+      			  <sort_order>1000</sort_order>
+      			  <children>
+          		  <websitetranslatorbackend translate="title">
+          			  <title>Translate.com</title>
+          		  </websitetranslatorbackend>
+      			  </children>
+      			</websitetranslator>
+    		  </children>
+    		</admin>
+  	  </resources>
+  	</acl>
+  	<layout>
+  	  <updates>
+    		<websitetranslator>
+    		  <file>websitetranslator.xml</file>
+    		</websitetranslator>
+  	  </updates>
+  	</layout>
+  	<menu>
+  	  <websitetranslator module="websitetranslator">
+    		<title>Translate.com</title>
+    		<sort_order>101</sort_order>
+    		<children>
+    		  <websitetranslatorbackend module="websitetranslator">
+      			<title>Settings</title>
+      			<sort_order>1</sort_order>
       			<action>admin_websitetranslator/adminhtml_websitetranslatorbackend</action>
     		  </websitetranslatorbackend>
     		</children>
@@ -111,7 +156,7 @@
     		  <children>
       			<websitetranslator translate="title" module="websitetranslator">
       			  <title>Website Translator</title>
-      			  <sort_order>1000</sort_order>
+      			  <sort_order>1001</sort_order>
       			  <children>
           		  <websitetranslatorbackend translate="title">
           			  <title>Translate.com</title>

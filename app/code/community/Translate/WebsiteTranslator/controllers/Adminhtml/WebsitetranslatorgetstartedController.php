@@ -1,5 +1,5 @@
 <?php
-class Translate_WebsiteTranslator_Adminhtml_WebsitetranslatorbackendController extends Mage_Adminhtml_Controller_Action
+class Translate_WebsiteTranslator_Adminhtml_WebsitetranslatorgetstartedController extends Mage_Adminhtml_Controller_Action
 {
 	public function indexAction()
   {

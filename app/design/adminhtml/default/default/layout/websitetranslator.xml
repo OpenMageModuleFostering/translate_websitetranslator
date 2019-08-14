@@ -2,7 +2,12 @@
 <layout version="0.1.0">
   <websitetranslator_adminhtml_websitetranslatorbackend_index>
 	<reference name="content">
-	  <block type="websitetranslator/adminhtml_websitetranslatorbackend" name="websitetranslatorbackend" template="websitetranslator/websitetranslatorbackend.phtml"/>
+	  <block type="websitetranslator/adminhtml_WebsiteTranslatorbackend" name="websitetranslatorbackend" template="websitetranslator/websitetranslatorbackend.phtml"/>
 	</reference>
   </websitetranslator_adminhtml_websitetranslatorbackend_index>
+    <websitetranslator_adminhtml_websitetranslatorgetstarted_index>
+	<reference name="content">
+	  <block type="websitetranslator/adminhtml_WebsiteTranslatorgetstarted" name="websitetranslatorgetstarted" template="websitetranslator/websitetranslatorgetstarted.phtml"/>
+	</reference>
+  </websitetranslator_adminhtml_websitetranslatorgetstarted_index>
 </layout>

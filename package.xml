@@ -1,43 +1,40 @@
 <?xml version="1.0"?>
 <package>
     <name>Translate_WebsiteTranslator</name>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <stability>stable</stability>
     <license>GNU General Public License</license>
     <channel>community</channel>
     <extends/>
     <summary>Easily configure and install your Translate.com Website Translator script!</summary>
-    <description>Translate.com is one of the leaders in translation services. With over 90 language options available and a growing number of localization products for the web, connecting with your global users has never been easier.&#xD;
-&lt;br /&gt;&lt;br /&gt;&#xD;
+    <description>Translate.com is one of the leaders in translation services. We provide human translation services in over 90 language pairs, and a growing number of products for localizing web content and customer support tickets. &#xD;
 &#xD;
-This plugin makes it easy to set up and install your Website Translator code snippet into your Magento store.&#xD;
+This plugin makes it easy to set up and install your Website Translator code snippet into your Magento store. &#xD;
 &#xD;
-Translate.com's Website Translator allows you to localize your entire website in just a few clicks!&#xD;
-&lt;br /&gt;&lt;a href="http://demo.translate.com"&gt;View our demo site here!&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&#xD;
-&lt;h3&gt;What's possible with Translate.com's Website Translator?&lt;/h3&gt;&#xD;
-&lt;b&gt;- Automatic free machine translations of your website text.&lt;/b&gt;&lt;br /&gt;&#xD;
-&lt;b&gt;- Easy management of your website translations via your Translate.com portal.&lt;/b&gt;&lt;br /&gt;&#xD;
-&lt;b&gt;- Order professional human translations of your website text.&lt;/b&gt;&lt;br /&gt;&#xD;
-&lt;b&gt;- Customizable language selection widget to allow your visitor to see your site in their language of choice.&lt;/b&gt;&lt;br /&gt;&#xD;
-&lt;b&gt;- Automatic replacement of images and background images based on your visitor's preferred language.&lt;/b&gt;&lt;br /&gt;&#xD;
-&lt;b&gt;- Automatic replacement of HTML5 audio and video based on your visitor's preferred language.&lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&#xD;
-&lt;h3&gt;Installation and use:&lt;/h3&gt;&#xD;
-1. Install the extension through Magento Connect.&lt;br /&gt;&#xD;
-2. In your Admin Panel main menu, go to Translate.com &gt; Website Translator.&lt;br /&gt;&#xD;
-3. Enter your valid key, choose your desired options and click save.&lt;br /&gt;&#xD;
-4. That's it! As pages are visited on your site, text will automatically be sent to our servers for translation. Changes may take up to an hour to reflect on your site.&lt;br /&gt;&lt;br /&gt;&#xD;
-&lt;h3&gt;Notes:&lt;/h3&gt;&#xD;
-- Use of the Website Translator requires a valid key and qualifying subscription from &lt;a href="https://translate.com"&gt;Translate.com&lt;/a&gt;&#xD;
-&lt;br /&gt;&#xD;
-- Translations of your website text and other settings can be managed through your account on &lt;a href="https://translate.com"&gt;Translate.com&lt;/a&gt;&#xD;
-&lt;br /&gt;&#xD;
-- Full documentation for this plugin and the Website Translator can be found at &lt;a href="https://translatecom.zendesk.com/hc/en-us"&gt;Translate Support&lt;/a&gt;&#xD;
-&lt;br /&gt;</description>
+Translate's Website Translator allows you to localize your entire website in just a few clicks! Once the Website Translator is installed and a web page is viewed, our script crawls through all of the text on your page and sends it to our system to be automatically translated. From here you can manage your website translations through our portal, opting for simple machine translation, professional human translation, or providing your own translation! &#xD;
+&#xD;
+Users can switch the language of your page using the default language widget created by the script. Text on your website is then automatically replaced with your published translations when a user views your site in a different language! &#xD;
+&#xD;
+What's possible with Translate.com's Website Translator?&#xD;
+&#xD;
+- Automatic free machine translations of your website text.&#xD;
+- Easy management of your website translations via your Translate.com portal.&#xD;
+- Order professional human translations of your website text.&#xD;
+- Customizable language selection widget to allow your visitor to see your site in their language of choice.&#xD;
+- Automatic replacement of images and background images based on your visitor's preferred language.&#xD;
+- Automatic replacement of HTML5 audio and video based on your visitor's preferred language.&#xD;
+&#xD;
+Installation and use:&#xD;
+&#xD;
+1. Install the extension through Magento Connect.&#xD;
+2. In your Admin Panel main menu, go to Translate.com &gt; Website Translator.&#xD;
+3. Enter your valid key, choose your desired options and click save.&#xD;
+4. That's it! As pages are visited on your site, text will automatically be sent to our servers for translation. Changes may take up to an hour to reflect on your site.</description>
     <notes>Initial release</notes>
     <authors><author><name>Translate.com</name><user>bobemerge</user><email>bob@emergemedia.com</email></author></authors>
-    <date>2016-10-11</date>
-    <time>17:58:33</time>
-    <contents><target name="magecommunity"><dir name="Translate"><dir name="WebsiteTranslator"><dir name="Block"><dir name="Adminhtml"><file name="WebsiteTranslatorbackend.php" hash="da32b8f953d0cb88f7cf41f280c0e53d"/></dir></dir><dir name="Helper"><file name="Data.php" hash="00747498d07f09590fd40e8ae73a8abd"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Websitetranslator"><file name="Collection.php" hash="089d69cd2bf5000bb9c1ba0a6d8e070a"/></dir><file name="Websitetranslator.php" hash="f7a006620f1e93fed00842d762e9ee41"/></dir><file name="Websitetranslator.php" hash="ed12ecd7f82036cd32d7d8abf04b2003"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="WebsitetranslatorbackendController.php" hash="937426a1949a0a7eeda48ba69bbd835a"/></dir></dir><dir name="etc"><file name="config.xml" hash="c673e16367e4db607f26098754cf66c6"/></dir><dir name="sql"><dir name="websitetranslator_setup"><file name="install-1.0.1.php" hash="3a1490a56ad63f7d78cee5f0a350ffc3"/></dir></dir><file name=".DS_Store" hash="0e5c576743db27869b4861e826e338aa"/></dir><file name=".DS_Store" hash="9b609e7d8474b4c2ee538ec9c0ce949c"/></dir></target><target name="mageetc"><dir name="modules"><file name="Translate_WebsiteTranslator.xml" hash="3c7184aea31dce9f3b5fa1c8aab2548b"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="websitetranslator.xml" hash="5432fc18a8fb28ed4e92f0ad127c3a27"/></dir><dir name="template"><dir name="websitetranslator"><file name="websitetranslatorbackend.phtml" hash="59cb558ff1b38e3640f227bd8b59a756"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="websitetranslator.xml" hash="c682516b1f53f45750bcce0808c66507"/></dir><dir name="template"><dir name="websitetranslator"><file name="head.phtml" hash="ba4a19010b35406a91f19e21d797810e"/></dir></dir></dir></dir></dir></target></contents>
+    <date>2016-11-11</date>
+    <time>16:58:43</time>
+    <contents><target name="magecommunity"><dir name="Translate"><dir name="WebsiteTranslator"><dir name="Block"><dir name="Adminhtml"><file name="WebsiteTranslatorbackend.php" hash="da32b8f953d0cb88f7cf41f280c0e53d"/><file name="WebsiteTranslatorgetstarted.php" hash="9e4ec890f8237d6969f7c8a042834b8d"/></dir><file name=".DS_Store" hash="8f7326c5c7cc99e99ece723e61eae297"/></dir><dir name="Helper"><file name="Data.php" hash="00747498d07f09590fd40e8ae73a8abd"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Websitetranslator"><file name="Collection.php" hash="089d69cd2bf5000bb9c1ba0a6d8e070a"/></dir><file name="Websitetranslator.php" hash="f7a006620f1e93fed00842d762e9ee41"/></dir><file name="Websitetranslator.php" hash="ed12ecd7f82036cd32d7d8abf04b2003"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="WebsitetranslatorbackendController.php" hash="f07c9ae61cf4d4bd502964fe9053f9d7"/><file name="WebsitetranslatorgetstartedController.php" hash="8d0de34dc40eed98ec3c9d344ad444ad"/></dir><file name=".DS_Store" hash="5dc59f72508452a0640a59d9090b8746"/></dir><dir name="etc"><file name="config.xml" hash="0e509936d880ec3013e181e853f14351"/></dir><dir name="sql"><dir name="websitetranslator_setup"><file name="install-1.0.3.php" hash="e9731ed1344f33fb93a005c0a3c2b6d9"/></dir></dir><file name=".DS_Store" hash="628c445f439607014f50a01d24d1dd4c"/></dir><file name=".DS_Store" hash="c4e5520c775e45f3fe40f13c8f48763c"/></dir></target><target name="mageetc"><dir name="modules"><file name="Translate_WebsiteTranslator.xml" hash="48d844a6fd9ce7733dcb0858749a6315"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="websitetranslator.xml" hash="ab54253c248ba7c0664e8c640452275a"/></dir><dir name="template"><dir name="websitetranslator"><file name="websitetranslatorbackend.phtml" hash="2a3287f37439d63228b89fc38fb2ba87"/><file name="websitetranslatorgetstarted.phtml" hash="648b1c2c18f6679d508d1161e695e5b9"/></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="websitetranslator.xml" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir><dir name="template"><dir name="websitetranslator"><file name="head.phtml" hash="d41d8cd98f00b204e9800998ecf8427e"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

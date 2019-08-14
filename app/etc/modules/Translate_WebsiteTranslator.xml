@@ -4,7 +4,7 @@
     <Translate_WebsiteTranslator>
       <active>true</active>
       <codePool>community</codePool>
-      <version>1.0.1</version>
+      <version>1.0.3</version>
     </Translate_WebsiteTranslator>
   </modules>
 </config>
