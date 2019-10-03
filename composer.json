@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Translate_WebsiteTranslator",
+    "name": "OpenMageModuleFostering\/Translate_WebsiteTranslator",
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
     "description": "Easily configure and install your Translate.com Website Translator script!",
     "authors": [
-    {
-        "name": "Translate.com",
-        "email": "bob@emergemedia.com"
-    }
-],
+        {
+            "name": "Translate.com",
+            "email": "bob@emergemedia.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
